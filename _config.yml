@@ -1,0 +1,12 @@
+title: Health Security Policy Academy
+description: A policy think-tank program advancing actionable health security intelligence and governance for outbreak prevention and response.
+url: "" # leave blank for now; set later to https://yourdomain.org
+baseurl: "" # leave blank
+timezone: America/New_York
+
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Minimal, GitHub Pages-safe plugins
+plugins:
+  - jekyll-feed
