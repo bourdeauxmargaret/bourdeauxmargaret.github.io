@@ -17,7 +17,7 @@ a:hover{color:var(--linkHover);text-decoration:underline}
 .site-header{border-bottom:1px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:5}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0}
 .brand{display:flex;align-items:center;gap:12px}
-.brand-logo{height:300px;max-width:1800px;width:auto;display:block}
+.brand-logo{height:200px;max-width:1500px;width:auto;display:block}
 
 .nav{display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-end}
 .nav a{padding:6px 0;color:var(--text)}
