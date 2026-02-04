@@ -9,10 +9,21 @@ layout: default
         {{ page.date | date: "%B %-d, %Y" }}
       </time>
       {% if page.tags %} · <span class="muted">{{ page.tags | join: ", " }}</span>{% endif %}
+      {% if page.video_note %} · <span class="muted">{{ page.video_note }}</span>{% endif %}
     </p>
   </header>
 
   <div class="post-content">
+    {% if page.video_id %}
+      <div class="video" style="margin: 14px 0 18px;">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/{{ page.video_id }}"
+          title="{{ page.title }}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    {% endif %}
+
     {{ content }}
   </div>
 </article>
