@@ -12,7 +12,7 @@
 html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
 a{color:var(--link);text-decoration:none}
 a:hover{color:var(--linkHover);text-decoration:underline}
-.container{max-width:1060px;margin:0 auto;padding:0 20px}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
 
 .site-header{border-bottom:1px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:5}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:4px 0}
@@ -219,6 +219,18 @@ a:hover{color:var(--linkHover);text-decoration:underline}
 .person-page section{margin-top:18px}
 .person-page h2{margin-bottom:8px}
 
+.blog-intro{margin:0 0 16px;color:var(--muted);max-width:70ch}
+.blog-list{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.blog-item{padding:0 0 14px;border-bottom:1px solid var(--border)}
+.blog-item:last-child{border-bottom:0;padding-bottom:0}
+.blog-item h2{margin:0 0 4px;font-size:1.1rem}
+.blog-meta{font-size:13px;color:var(--muted);margin:0 0 6px}
+.blog-excerpt{margin:0;color:var(--text)}
+
+.post-meta{font-size:13px;color:var(--muted);margin:4px 0 12px}
+.post-content{max-width:75ch}
+.post-content p{margin:0 0 14px}
+
 .hero{
   border:1px solid var(--border);
   background:linear-gradient(180deg,var(--soft),#fff);
@@ -241,6 +253,45 @@ a:hover{color:var(--linkHover);text-decoration:underline}
 .card h3{margin:0 0 8px}
 .card p{margin:0;color:var(--muted)}
 
+.home-hero{
+  background:var(--soft);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:24px;
+  margin-bottom:24px;
+}
+.home-hero h1{margin:0 0 10px}
+.home-hero p{margin:0 0 10px}
+.home-hero .home-host{color:var(--muted);font-size:14px}
+
+.home-section{margin-top:28px}
+.home-section h2{margin:0 0 10px}
+
+.home-project-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+.home-project-card{
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px;
+  background:#fff;
+}
+.home-project-card h3{margin:0 0 6px;font-size:1rem}
+.home-project-card p{margin:0;color:var(--muted)}
+
+.home-featured{
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px;
+  background:#fff;
+}
+.home-featured h3{margin:0 0 6px;font-size:1rem}
+.home-featured p{margin:0;color:var(--muted)}
+
+.home-secondary-list{margin:0;padding-left:18px}
+
 @media (max-width: 900px){
   .grid{grid-template-columns:1fr}
   .brand-logo{height:36px;max-height:36px;max-width:220px}
@@ -261,6 +312,7 @@ a:hover{color:var(--linkHover);text-decoration:underline}
   .people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .person-header{flex-direction:column;gap:12px}
   .person-header-photo{width:110px;height:110px}
+  .home-project-grid{grid-template-columns:1fr}
 }
 
 @media (max-width: 600px){

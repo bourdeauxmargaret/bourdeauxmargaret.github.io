@@ -1,8 +1,8 @@
 ---
 title: Project TransFORM
 layout: project
-subtitle: Converting health security goals into implementable governance and financing reforms.
-funder: TBD
+subtitle: Improving the speed, equity and efficiency of Outbreak Investigation Capabilities in the US
+funder: A Massachusetts Consortium on Pathogen Readiness Project
 status: Active
 last_updated: February 2026
 highlights:
@@ -21,8 +21,6 @@ key_facts:
     value: 2026-present
   - label: Partners
     value: Policy and implementation partners
-  - label: Geography
-    value: Global
   - label: Status
     value: Active
 team:

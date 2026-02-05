@@ -1,7 +1,7 @@
 ---
 title: Drawing the Line
 layout: project
-subtitle: Defining practical trigger thresholds for action in high-risk health security moments.
+subtitle: Measuring the impact of federal policy changes on local public health outbreak preparedness capabilities
 funder: TBD
 status: Active
 last_updated: February 2026
@@ -21,8 +21,6 @@ key_facts:
     value: 2026-present
   - label: Partners
     value: Policy and preparedness stakeholders
-  - label: Geography
-    value: Global
   - label: Status
     value: Active
 team:

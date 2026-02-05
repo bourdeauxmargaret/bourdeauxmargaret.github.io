@@ -1,7 +1,7 @@
 ---
 title: US Global Health Spending Watch
 layout: project
-subtitle: A public dashboard tracking how the U.S. government obligates and spends global health funds.
+subtitle: Tracking how the U.S. government obligates and spends global health funds
 funder: TBD
 status: Active
 last_updated: February 2026
@@ -9,20 +9,18 @@ highlights:
   - label: Focus
     value: US global health financing
   - label: Methods
-    value: Budget crosswalks and trend analysis
+    value: Analysis of publicly available financing data
   - label: Outputs
-    value: Briefs and budget snapshots
+    value: Interactive dashboard; analysis blog
   - label: Geography
     value: Global
 key_facts:
   - label: Funder
-    value: TBD
+    value: 
   - label: Dates
     value: 2026-present
   - label: Partners
-    value: Policy and budget stakeholders
-  - label: Geography
-    value: Global
+    value: Partners In Health
   - label: Status
     value: Active
 team:
@@ -30,15 +28,10 @@ team:
     url: /people/margaret-bourdeaux/
     role: Director, HSPA
 products_featured:
-  - type: Brief
-    title: Example Publication
-    url: /publications/example-publication/
-    summary: Template publication entry for project-linked analysis outputs.
-    date: February 2026
-  - type: Blog
-    title: Welcome
-    url: /blog/2026/02/04/welcome/
-    summary: Initial program announcement and blog launch note.
+  - type: Dashboard
+    title: U.S. Global Health Spending Watch
+    url: https://globalhealthwatch.org/
+    summary: A public dashboard tracking how the U.S. government obligates and spends global health funds.
     date: February 2026
 products_more:
   - title: View all publications
@@ -47,8 +40,4 @@ products_more:
     url: /blog/
 ---
 
-US Global Health Spending Watch tracks how US federal resources for global health are allocated, obligated, and executed across agencies and accounts. The project is built to make complex budget structures usable for policy teams, implementing partners, and oversight audiences.
-
-The work combines appropriations analysis, account-level crosswalks, and year-over-year comparisons to identify both shifts and continuity in spending patterns. It is designed to surface tradeoffs early, before key policy and planning decisions are locked in.
-
-The project also supports rapid-response analysis during major fiscal events, including supplemental requests, rescissions, and reprogramming actions. Outputs are formatted for practical use in briefing materials and internal planning cycles.
+U.S. Global Health Spending Watch is a public dashboard designed to support policy analysis, accountability, and advocacy by making federal global health spending patterns transparent and accessible. It helps decision-makers, journalists, advocates, and the public see where U.S. global health commitments are made, how they change over time, and which agencies and programs are driving those shifts. The dashboard is built on underlying financial data drawn from public U.S. government sources, including federal spending and accounting systems. Rather than relying on budget announcements or policy statements, it shows how funds are actually obligated and distributed in practice. These data reveal which organizations receive funding, what types of activities are supported, and how priorities differ across countries and technical areas. By comparing stated policy goals with observed spending patterns, the dashboard makes it possible to assess whether U.S. global health investments align with stated objectives — and where gaps or inconsistencies may exist.

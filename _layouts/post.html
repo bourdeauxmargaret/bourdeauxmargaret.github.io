@@ -8,6 +8,7 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date: "%B %-d, %Y" }}
       </time>
+      {% if page.author %} · <span class="muted">{{ page.author }}</span>{% endif %}
       {% if page.tags %} · <span class="muted">{{ page.tags | join: ", " }}</span>{% endif %}
       {% if page.video_note %} · <span class="muted">{{ page.video_note }}</span>{% endif %}
     </p>

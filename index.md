@@ -1,46 +1,47 @@
 ---
 layout: page
-title: Health Security Policy Academy
-subtitle: Policy-relevant analysis, methods, and partnerships to improve outbreak intelligence and transmission-focused response.
 ---
 
-<div class="hero">
-  <p class="muted">Think-tank tone · Academic program site · Blog + short video ready</p>
+<section class="home-hero">
+  <p>Humanity is facing a formidable set of health security threats—health crises that can rapidly overwhelm health systems, spark widespread death and disability, and destabilize states, regions and societies. These include the rising risks of pandemics, environmental contamination, and climate-change related health conditions; direct targeting of health systems during armed conflicts and cyberwarfare; and unintended consequences from emerging bioengineering and artificial intelligence technologies.</p> 
+  <p>Health Security Policy Academy, a policy think-tank in the Division of Global Health Equity at MassGeneral Brigham, aims to advance policy-related knowledge about the most pressing health security challenges of our time. We use a unique “practice to policy” approach: we leverage the knowledge of front line health care providers, bench and field researchers, and public health practitioners to inform policy analysis and formulation to ensure our work is practical, high impact, and grounded in the mission of securing health for all.</p>
+</section>
 
-  ## What we do
-  The Health Security Policy Academy advances practical, policy-relevant work at the intersection of outbreak response, health system performance, and health security governance. We partner with public agencies, health systems, and research collaborators to generate actionable intelligence during crises—and to improve the systems that produce it.
-
-  <div class="grid">
-    <div class="card">
-      <h3>Projects</h3>
-      <p>Transmission-focused investigations, operational learning, and policy design.</p>
-      <p><a href="/projects">Explore projects →</a></p>
-    </div>
-    <div class="card">
-      <h3>Blog</h3>
-      <p>Short posts: methods, policy briefs, field notes, and commentary.</p>
-      <p><a href="/blog">Read the blog →</a></p>
-    </div>
-    <div class="card">
-      <h3>Events & Publications</h3>
-      <p>Talks, convenings, publications, and media.</p>
-      <p><a href="/publications">See updates →</a></p>
-    </div>
+<section class="home-section">
+  <h2>Our Projects</h2>
+  <div class="home-project-grid">
+    {% assign home_projects = site.projects | sort: "title" %}
+    {% for project in home_projects limit: 4 %}
+      <a class="home-project-card" href="{{ project.url | relative_url }}">
+        <h3>{{ project.title }}</h3>
+        {% if project.subtitle %}<p>{{ project.subtitle }}</p>{% endif %}
+      </a>
+    {% endfor %}
   </div>
-</div>
+</section>
 
-## Featured video (example)
-Replace the YouTube embed link with your own (instructions below).
+<section class="home-section">
+  <h2>Featured</h2>
+  {% assign featured_post = site.posts | first %}
+  {% if featured_post %}
+    <div class="home-featured">
+      <h3><a href="{{ featured_post.url | relative_url }}">{{ featured_post.title }}</a></h3>
+      <p>{{ featured_post.excerpt | strip_html | truncate: 200 }}</p>
+    </div>
+  {% else %}
+    <div class="home-featured">
+      <h3>No featured post yet</h3>
+      <p>Add a post in the blog to feature here.</p>
+    </div>
+  {% endif %}
+</section>
 
-<div class="video">
-  <iframe
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-    title="HSPA video"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
-
-## Contact
-For collaborations, speaking, or program inquiries, see the **Contact** page.  
-<a href="/contact">Get in touch →</a>
+<section class="home-section">
+  <h2>Recent publications</h2>
+  {% assign recent_pubs = site.publications | sort: "title" %}
+  <ul class="home-secondary-list">
+    {% for pub in recent_pubs limit: 3 %}
+      <li><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>

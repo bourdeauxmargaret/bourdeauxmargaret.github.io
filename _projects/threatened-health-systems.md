@@ -1,8 +1,8 @@
 ---
 title: Threatened Health Systems
 layout: project
-subtitle: Identifying early stress signals in health systems under conflict and climate pressure.
-funder: TBD
+subtitle: Preparing health systems for armed conflict & hybrid warfare
+funder: A NATO Science for Peace & Security Project
 status: Active
 last_updated: February 2026
 highlights:
@@ -13,7 +13,7 @@ highlights:
   - label: Outputs
     value: Briefs and decision frameworks
   - label: Geography
-    value: Fragile and crisis-affected settings
+    value: Global
 key_facts:
   - label: Funder
     value: TBD
@@ -21,8 +21,6 @@ key_facts:
     value: 2026-present
   - label: Partners
     value: Academic and policy collaborators
-  - label: Geography
-    value: Global
   - label: Status
     value: Active
 team:
