@@ -1,0 +1,65 @@
+---
+layout: default
+---
+<article class="person-page">
+  <header class="person-header">
+    {% if page.photo %}
+      <img class="person-header-photo" src="{{ page.photo | relative_url }}" alt="{{ page.title }}">
+    {% endif %}
+    <div class="person-header-main">
+      <h1>{{ page.title }}</h1>
+      {% if page.role %}<p class="person-header-role">{{ page.role }}</p>{% endif %}
+      {% if page.affiliation %}<p class="person-header-affiliation">{{ page.affiliation }}</p>{% endif %}
+      {% if page.links %}
+        <ul class="person-links">
+          {% for link in page.links %}
+            <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </header>
+
+  <section class="person-bio">
+    <h2>Biography</h2>
+    <div class="page-content">
+      {{ content }}
+    </div>
+  </section>
+
+  {% if page.projects %}
+    <section class="person-projects">
+      <h2>Projects at HSPA</h2>
+      <ul>
+        {% for project_slug in page.projects %}
+          {% assign project = site.projects | where: "slug", project_slug | first %}
+          {% if project %}
+            <li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  {% if page.selected_publications %}
+    <section class="person-publications">
+      <h2>Selected publications</h2>
+      <ul>
+        {% for pub in page.selected_publications %}
+          <li><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  {% if page.prior_roles %}
+    <section class="person-prior-roles">
+      <h2>Prior roles</h2>
+      <ul>
+        {% for role in page.prior_roles %}
+          <li>{{ role }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+</article>

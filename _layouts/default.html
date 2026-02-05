@@ -6,7 +6,7 @@
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="description" content="{{ site.description }}" />
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}" />
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/hspa.css' | relative_url }}?v={{ site.time | date: '%s' }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
   </head>
 
@@ -23,12 +23,23 @@
 
         <nav class="nav">
           <a href="{{ '/' | relative_url }}">Home</a>
+          <div class="nav-item nav-item--dropdown">
+            <a class="nav-link" href="{{ '/projects' | relative_url }}">Projects</a>
+            {% assign nav_projects = site.projects | sort: "title" %}
+            {% if nav_projects.size > 0 %}
+            <div class="dropdown-menu">
+              <a class="dropdown-all" href="{{ '/projects' | relative_url }}">All Projects</a>
+              <div class="dropdown-separator"></div>
+              {% for project in nav_projects %}
+              <a class="dropdown-item" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          <a href="{{ '/publications' | relative_url }}">Events &amp; Publications</a>
+          <a href="{{ '/blog' | relative_url }}">Blog</a>
           <a href="{{ '/about' | relative_url }}">About</a>
           <a href="{{ '/people' | relative_url }}">People</a>
-          <a href="{{ '/projects' | relative_url }}">Projects</a>
-          <a href="{{ '/blog' | relative_url }}">Blog</a>
-          <a href="{{ '/publications' | relative_url }}">Events &amp; Publications</a>
-          <a href="{{ '/contact' | relative_url }}">Contact</a>
         </nav>
       </div>
     </header>
@@ -41,13 +52,8 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <div class="footer-left">
-          <strong>{{ site.title }}</strong><br />
-          <span class="muted">{{ site.description }}</span>
-        </div>
-        <div class="footer-right">
-          <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
-        </div>
+        <span class="footer-copy">&copy; 2026 Health Security Policy Academy</span>
+        <a class="footer-contact" href="{{ '/contact' | relative_url }}">Contact</a>
       </div>
     </footer>
   </body>

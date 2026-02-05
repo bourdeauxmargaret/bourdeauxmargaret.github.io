@@ -1,0 +1,77 @@
+---
+layout: default
+---
+<article class="project-page">
+  <header class="project-hero">
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="project-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+  </header>
+
+  {% if page.highlights %}
+    <ul class="project-highlights" aria-label="Project highlights">
+      {% for item in page.highlights %}
+        <li><strong>{{ item.label }}:</strong> {{ item.value }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <div class="project-layout">
+    <section class="project-card project-keyfacts">
+      <dl>
+        {% for fact in page.key_facts %}
+          <dt>{{ fact.label }}</dt>
+          <dd>{{ fact.value }}</dd>
+        {% endfor %}
+      </dl>
+    </section>
+
+    <section class="project-overview">
+      <h2>Overview</h2>
+      {% if page.overview %}
+        {% for paragraph in page.overview %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </section>
+
+    <section class="project-card project-team">
+      <h2>Team</h2>
+      <ul>
+        {% for person in page.team %}
+          <li>
+            <a href="{{ person.url | relative_url }}">{{ person.name }}</a>
+            {% if person.role %}<span>{{ person.role }}</span>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="project-products">
+      <h2>Products</h2>
+      {% if page.products_featured %}
+        <div class="project-product-grid">
+          {% for product in page.products_featured %}
+            <article class="project-product-card">
+              {% if product.type %}<p class="product-type">{{ product.type }}</p>{% endif %}
+              <h3><a href="{{ product.url | relative_url }}">{{ product.title }}</a></h3>
+              {% if product.summary %}<p>{{ product.summary }}</p>{% endif %}
+              {% if product.date %}<p class="product-date">{{ product.date }}</p>{% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if page.products_more %}
+        <ul class="project-product-list">
+          {% for product in page.products_more %}
+            <li><a href="{{ product.url | relative_url }}">{{ product.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </section>
+  </div>
+</article>

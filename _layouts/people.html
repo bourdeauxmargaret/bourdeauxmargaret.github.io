@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<article class="people-page">
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+    <div class="page-content">
+      {{ content }}
+    </div>
+  </header>
+
+  {% assign group_order = "Leadership & Faculty|Fellows & Associates|Students & Trainees|Affiliated Experts" | split: "|" %}
+  {% for group_name in group_order %}
+    {% assign grouped_people = site.people | where: "group", group_name | sort: "title" %}
+    {% if grouped_people.size > 0 %}
+      <section class="people-group">
+        <h2>{{ group_name }}</h2>
+        <div class="people-grid">
+          {% for person in grouped_people %}
+            <article class="person-card">
+              {% if person.photo %}
+                <a class="person-photo-link" href="{{ person.url | relative_url }}" aria-label="{{ person.title }}">
+                  <img class="person-photo" src="{{ person.photo | relative_url }}" alt="{{ person.title }}">
+                </a>
+              {% endif %}
+              <h3><a href="{{ person.url | relative_url }}">{{ person.title }}</a></h3>
+              {% if person.role %}<p class="person-role">{{ person.role }}</p>{% endif %}
+              {% if person.affiliation %}<p class="person-affiliation">{{ person.affiliation }}</p>{% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+</article>
