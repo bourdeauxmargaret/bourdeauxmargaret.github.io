@@ -1,12 +1,18 @@
 ---
 layout: page
 title: Blog
-subtitle: Short posts, briefs, and curated video clips.
+subtitle: Updates, briefs, and commentary.
+permalink: /blog/
 ---
 
+This page is the archive for blog posts published by HSPA.
+
+## Latest posts
+{% if site.posts.size > 0 %}
 {% for post in site.posts %}
 - **[{{ post.title }}]({{ post.url | relative_url }})**
-  {% if post.video_id %} <span class="muted">· Video</span>{% endif %}  
   <span class="muted">{{ post.date | date: "%B %-d, %Y" }}</span>
-  {% if post.video_note %} — <span class="muted">{{ post.video_note }}</span>{% endif %}
 {% endfor %}
+{% else %}
+- No posts yet. Add files in `_posts/`.
+{% endif %}

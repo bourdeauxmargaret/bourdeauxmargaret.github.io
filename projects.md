@@ -4,19 +4,14 @@ title: Projects
 subtitle: Active workstreams and methods development.
 ---
 
-Use this page for concise, scannable summaries (project name → 2–4 lines → link/contact).
+This page highlights active workstreams and links to detailed project pages.
 
-<div class="grid">
-  <div class="card">
-    <h3>Project 1 (rename)</h3>
-    <p>1–2 sentences on the objective and what’s being built/tested.</p>
-  </div>
-  <div class="card">
-    <h3>Project 2 (rename)</h3>
-    <p>1–2 sentences on the objective and policy relevance.</p>
-  </div>
-  <div class="card">
-    <h3>Project 3 (rename)</h3>
-    <p>1–2 sentences on partners and outputs.</p>
-  </div>
-</div>
+## Projects
+{% assign project_entries = site.projects | sort: "title" %}
+{% if project_entries.size > 0 %}
+{% for project in project_entries %}
+- **[{{ project.title }}]({{ project.url | relative_url }})**
+{% endfor %}
+{% else %}
+- No project entries yet. Add files in `_projects/`.
+{% endif %}

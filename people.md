@@ -4,14 +4,14 @@ title: People
 subtitle: Leadership, collaborators, and partners.
 ---
 
-## Leadership
-- **Margaret Bourdeaux** — Director (add title/affiliation)
-- Add additional leadership names
+This page introduces the team behind HSPA and links to full profile pages.
 
-## Core collaborators
-- Name — Role / affiliation
-- Name — Role / affiliation
-
-## Advisors / partners
-- Name — Affiliation
-- Name — Affiliation
+## People
+{% assign people_entries = site.people | sort: "title" %}
+{% if people_entries.size > 0 %}
+{% for person in people_entries %}
+- **[{{ person.title }}]({{ person.url | relative_url }})**
+{% endfor %}
+{% else %}
+- No people entries yet. Add files in `_people/`.
+{% endif %}

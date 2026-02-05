@@ -10,3 +10,15 @@ permalink: /blog/:year/:month/:day/:title/
 # Minimal, GitHub Pages-safe plugins
 plugins:
   - jekyll-feed
+
+# Custom content collections
+collections:
+  people:
+    output: true
+    permalink: /people/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
+  publications:
+    output: true
+    permalink: /publications/:name/
