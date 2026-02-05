@@ -24,7 +24,7 @@ subtitle: Policy-relevant analysis, methods, and partnerships to improve outbrea
     <div class="card">
       <h3>Events & Publications</h3>
       <p>Talks, convenings, publications, and media.</p>
-      <p><a href="/events-publications">See updates →</a></p>
+      <p><a href="/publications">See updates →</a></p>
     </div>
   </div>
 </div>
