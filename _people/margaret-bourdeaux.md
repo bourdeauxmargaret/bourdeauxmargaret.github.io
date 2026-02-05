@@ -3,7 +3,7 @@ title: Margaret Bourdeaux
 layout: person
 group: Leadership & Faculty
 role: Founding Director, Health Security Policy Academy
-affiliation: Division of Global Health Equity, Department of Internal Medicine, MassGeneral Brigham
+affiliation: Division of Global Health Equity, MassGeneral Brigham
 photo: /assets/img/people/margaret-bourdeaux.jpg
 projects:
   - us-global-health-spending-watch
