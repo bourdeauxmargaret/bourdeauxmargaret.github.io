@@ -3,6 +3,7 @@ layout: page
 ---
 
 <section class="home-hero">
+  <h1>Practice to Policy</h1>
   <p>Humanity is facing a formidable set of health security threats—health crises that can rapidly overwhelm health systems, spark widespread death and disability, and destabilize states, regions and societies. These include the rising risks of pandemics, environmental contamination, and climate-change related health conditions; direct targeting of health systems during armed conflicts and cyberwarfare; and unintended consequences from emerging bioengineering and artificial intelligence technologies.</p> 
   <p>Health Security Policy Academy, a policy think-tank in the Division of Global Health Equity at MassGeneral Brigham, aims to advance policy-related knowledge about the most pressing health security challenges of our time. We use a unique “practice to policy” approach: we leverage the knowledge of front line health care providers, bench and field researchers, and public health practitioners to inform policy analysis and formulation to ensure our work is practical, high impact, and grounded in the mission of securing health for all.</p>
 </section>

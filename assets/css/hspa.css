@@ -15,9 +15,9 @@ a:hover{color:var(--linkHover);text-decoration:underline}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
 .site-header{border-bottom:1px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:5}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:4px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:6px 0}
 .brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}
-.brand-logo{display:block;height:44px;max-height:44px;max-width:280px;width:auto}
+.brand-logo{display:block;height:64px;max-height:64px;max-width:403px;width:auto}
 
 .nav{
   display:flex;
@@ -294,7 +294,7 @@ a:hover{color:var(--linkHover);text-decoration:underline}
 
 @media (max-width: 900px){
   .grid{grid-template-columns:1fr}
-  .brand-logo{height:36px;max-height:36px;max-width:220px}
+  .brand-logo{height:52px;max-height:52px;max-width:317px}
   .nav{gap:10px;margin-left:20px}
   .nav > a,.nav-link{font-size:0.82rem}
   .footer-inner{flex-wrap:nowrap;gap:12px}
