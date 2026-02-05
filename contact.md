@@ -5,4 +5,4 @@ subtitle: Collaboration, speaking, and program inquiries.
 ---
 
 ## Email
-- Program inquiries: **youremail@domain.org**
+- Program inquiries: **mbourdeaux@mgb.org**
